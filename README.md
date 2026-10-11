@@ -8,13 +8,10 @@ Chat UI + LLM (OpenRouter) + MCP client -> custom Gmail MCP server -> Gmail API.
 Requests travel down the layers and results return the same way. Only the MCP server talks to Gmail; the LLM only sees the tool list.
 
 ## Demo
-**1. Approval gate.** The app shows an Approve / Reject card before any email is sent.
 
-![Approval card and delivery confirmation](docs/screenshots/01-approval-and-send.png)
+**. Test email sent through MCP.** The model composes a formal email from a one-line instruction; after Approve, `send_email` runs through the MCP server.
 
-**2. Test email sent through MCP.** The model composes a formal email from a one-line instruction; after Approve, `send_email` runs through the MCP server.
-
-![Email composed by the LLM and sent](docs/screenshots/02-email-to-professor.png)
+![Email composed by the LLM and sent](docs/02-email-to-professor.png)
 
 ## Setup
 1. Google Cloud Console: new project -> enable **Gmail API** -> OAuth consent screen (External, add your own Gmail as *Test user*) -> Credentials -> **OAuth client ID, type Desktop app** -> download JSON as `credentials.json` into this folder.
