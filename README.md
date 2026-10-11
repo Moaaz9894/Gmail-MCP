@@ -11,7 +11,7 @@ Requests travel down the layers and results return the same way. Only the MCP se
 
 **. Test email sent through MCP.** The model composes a formal email from a one-line instruction; after Approve, `send_email` runs through the MCP server.
 
-![Email composed by the LLM and sent](docs/02-email-to-professor.png)
+![Email composed by the LLM and sent](docs/email-to-professor.png)
 
 ## Setup
 1. Google Cloud Console: new project -> enable **Gmail API** -> OAuth consent screen (External, add your own Gmail as *Test user*) -> Credentials -> **OAuth client ID, type Desktop app** -> download JSON as `credentials.json` into this folder.
